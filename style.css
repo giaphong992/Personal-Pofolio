@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Gemunu Libre', sans-serif;
+}
+
+body,html{
+    width:100%;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+}
+.landing{
+    width:100%;
+    height: 100%;
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1508179522353-11ba468c4a1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    display:flex;
+    align-items: center;
+    width:100%;
+}
+.logo{
+    width:70%;
+}
+.logo img{
+    width:5em;
+    margin-left:5em;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    
+}
+
+header ul li {
+    width:5em;
+    margin-right:1em;
+    text-align: center;
+}
+header ul li a{
+    color:#fff;
+    text-decoration: none;
+    font-size: 140%;
+    position: relative;
+    
+}
+
+header ul li a::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top:100%;
+    left:50%;
+    transform: translateX(-50%); /* thanh trắng di chuyen theo trục X cua thẻ after*/
+    background-color: #fff;
+    transition: width 0.3s;/*thêm effect hiện width khi hover */
+}
+
+header ul li a:hover::after{
+    width:50%;
+    transition: width 0.3s;
+}
+
+.textbox{
+    color:#fff;
+    position: absolute;
+    bottom:10%;
+    left:5%;
+}
+.textbox p{
+    font-size: 50px;
+    font-weight: 600;
+}
+.textbox h1{
+    font-size: 10em;
+    color:transparent;
+    -webkit-text-stroke: 1px #fff; /* tạo ra viền ngoài của text*/
+    background:url(images/back.png);
+    -webkit-background-clip: text;/* background chỉ ở bên trong text */
+    background-position: 0 0;/* vị trí x:0 y:0*/
+    animation: back 20s linear infinite;
+}
+
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
+.textbox h3{
+    margin-top: 1%;
+    font-size:45px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    
+}
+
+.textbox .description{
+    display: flex;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.description a{
+    color:#fff;
+    text-decoration: none;
+    padding:1em 2em;
+    border:1px solid #fff;
+    margin:0 1%;
+}
+.description a:hover{
+    background-image:linear-gradient(30deg,rgba(255, 255, 255, 0.3) 50%, rgb(202, 202, 202) 100%);
+    animation: texts 1s linear ;
+    
+}
+@keyframes texts {
+    100%{
+        background-position: 300px 0;
+    }
+}
+.connect{
+    vertical-align: middle;
+}
+.description span{
+    font-size: 110%;
+}
+
+/* nav bar */
+body nav{
+    position: absolute;
+    right:0;
+    top:50%;
+    
+}
+
+body nav ul{
+    list-style: none;
+}
+body nav ul li{
+    padding:1em;
+
+}
+body nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    padding-right: 1%;
+    font-size: 1.5em;
+}
+body nav ul li a.l1:hover{
+    color:#4267B2;
+    font-size: 3em;
+    transition: 1s ease;
+}
+
+body nav ul li a.l2:hover{
+  font-size:3em;
+  transition: 1s ease;
+  color:#D25565;
+}
+
+body nav ul li a.l3:hover{
+  font-size:3em;
+  transition: 1s ease;
+  color:#2E94B9;
+}
+.below .image1{
+    background-image:url("https://img.freepik.com/free-vector/neon-design-colorful-background_23-2149084790.jpg?size=626&ext=jpg");
+}
+.below .image2{
+    background-image:url("https://image.freepik.com/free-vector/realistic-motion-neon-lights-background_52683-65167.jpg");
+}
+.parallax{
+    
+    position: relative;
+    opacity: 0.8;
+    width: 100%;
+    height:100vh;/* Full height */
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body .parallax .ptext1{
+    position: absolute;
+    top:50%;
+    width:100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 27px;
+    
+    
+}
+body .parallax .ptext1 span{
+    color:#fff;
+    padding:20px;
+    background-color: #000;
+    letter-spacing: 8px;
+    opacity:0.8;
+}
+
+.sec1,.sec2{
+    text-align:center;
+    padding:3em 3em;
+    background-color: #f4f4f4;
+    color: #666;
+    
+}
+.sec1 h1{
+    margin-bottom: 1em ;
+}
+.sec1 .work{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.sec1  figure img{
+    width:300px;
+    height:200px;
+}
+
+.sec1 .playground{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+body .parallax .ptext2{
+    position: absolute;
+    top:50%;
+    width:100%;
+    text-align: center;
+    font-size: 27px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+}
+body .parallax .ptext2 span{
+    color:#fff;
+    padding:20px;
+    background-color: #000;
+    letter-spacing: 8px;
+    opacity:0.8;
+}
