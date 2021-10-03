@@ -11,27 +11,23 @@
 body,html{
     width:100%;
     height: 100%;
-    overflow: auto;
-    position: relative;
-}
-.landing{
-    width:100%;
-    height: 100%;
-    position: relative;
-    background-image: url(https://images.unsplash.com/photo-1508179522353-11ba468c4a1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    
 }
 header{
+    position: fixed;
+    top:0;
+    background-color: #000;
     display:flex;
     align-items: center;
     width:100%;
+    z-index: 1;
 }
-.logo{
+
+
+header .logo{
     width:70%;
 }
-.logo img{
+header .logo img{
     width:5em;
     margin-left:5em;
 }
@@ -72,17 +68,26 @@ header ul li a:hover::after{
     transition: width 0.3s;
 }
 
-.textbox{
+.landing{
+    width:100%;
+    height: 100%;
+    position: relative;
+    background-image: url(https://images.unsplash.com/photo-1508179522353-11ba468c4a1c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.landing .textbox{
     color:#fff;
     position: absolute;
     bottom:10%;
     left:5%;
 }
-.textbox p{
+.landing .textbox p{
     font-size: 50px;
     font-weight: 600;
 }
-.textbox h1{
+.landing.textbox h1{
     font-size: 10em;
     color:transparent;
     -webkit-text-stroke: 1px #fff; /* tạo ra viền ngoài của text*/
@@ -138,10 +143,10 @@ header ul li a:hover::after{
 
 /* nav bar */
 body nav{
-    position: absolute;
+    position: fixed;
     right:0;
-    top:50%;
-    
+    top:30%;
+    z-index: 1;
 }
 
 body nav ul{
@@ -152,7 +157,7 @@ body nav ul li{
 
 }
 body nav ul li a{
-    color:#fff;
+    color:#000;
     text-decoration: none;
     padding-right: 1%;
     font-size: 1.5em;
@@ -174,35 +179,39 @@ body nav ul li a.l3:hover{
   transition: 1s ease;
   color:#2E94B9;
 }
-.below .image1{
-    background-image:url("https://img.freepik.com/free-vector/neon-design-colorful-background_23-2149084790.jpg?size=626&ext=jpg");
-}
-.below .image2{
-    background-image:url("https://image.freepik.com/free-vector/realistic-motion-neon-lights-background_52683-65167.jpg");
-}
-.parallax{
+
+/* parallax */
+.information .parallax{
     
     position: relative;
     opacity: 0.8;
     width: 100%;
-    height:100vh;/* Full height */
+    height:50vh;/* Full height */
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-body .parallax .ptext1{
+.information .image1{
+    background-image:url("https://img.freepik.com/free-vector/neon-design-colorful-background_23-2149084790.jpg?size=626&ext=jpg");
+}
+.information .image2{
+    background-image:url("https://image.freepik.com/free-vector/realistic-motion-neon-lights-background_52683-65167.jpg");
+}
+.information .image3{
+    background-image: url("https://image.freepik.com/free-vector/golden-violet-speed-neon-lights-background_23-2148621358.jpg");
+}
+body .parallax .ptext{
     position: absolute;
     top:50%;
     width:100%;
     text-align: center;
-    text-transform: uppercase;
     font-size: 27px;
-    
+    text-transform: uppercase;
     
 }
-body .parallax .ptext1 span{
+body .parallax .ptext span{
     color:#fff;
     padding:20px;
     background-color: #000;
@@ -217,6 +226,7 @@ body .parallax .ptext1 span{
     color: #666;
     
 }
+/* section1 */
 .sec1 h1{
     margin-bottom: 1em ;
 }
@@ -225,6 +235,7 @@ body .parallax .ptext1 span{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .sec1  figure img{
@@ -237,20 +248,163 @@ body .parallax .ptext1 span{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
 }
-body .parallax .ptext2{
-    position: absolute;
-    top:50%;
-    width:100%;
-    text-align: center;
+/* sec2 */
+.sec2{
+    display: grid;
+    grid-template-columns: 12em auto;
+    grid-template-rows: repeat(2,auto);
+
+
+}
+.sec2 h1{
+    grid-row:1/2;
+    grid-column: 1/3;
     font-size: 27px;
-    text-transform: uppercase;
-    letter-spacing: 8px;
+    
 }
-body .parallax .ptext2 span{
+.sec2 .about-me-img{
+    grid-row:2/3;
+    grid-column:1/2;
+}
+.sec2 p{
+    grid-row:2/3;
+    grid-column: 2/3;
+    text-align: left;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+.sec2 .about-me-img img{
+    width:10em;
+    border-radius: 50%;
+    margin:1em 0;
+    
+}
+
+/* sec3 */
+.sec3{
+    padding:3em 3em;
+    background-color: #f4f4f4;
+    color: #666;
+    
+}
+.sec3 .contact-title{
+    text-align: center;
+    
+}
+.sec3 form{
+    margin:1em auto;
+    width:50%;
+}
+.sec3 form .row {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 1em;
+    
+}
+.sec3 form .row .email{
+    margin-left: 3em;
+}
+.sec3 form .row2 {
+    display: flex;
+    flex-direction: column;
+}
+.sec3 label{
+    font-size:1em;
+}
+.sec3 input{
+    width: 100%;
+    margin:0.5em 0;
+    padding-left:0.5em;
+    height: 2em;
+    font-size: 1em;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background-color:transparent;
+}
+.sec3 textarea{
+    font-size: 1em;
+    padding: 0.5em;
+    margin:0.5em 0;
+}
+.sec3 .message{
+    text-align: center;
+}
+.sec3 .message button{
+    padding:1em 5em;
+    background: #084acfef;
     color:#fff;
-    padding:20px;
-    background-color: #000;
-    letter-spacing: 8px;
-    opacity:0.8;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border:none;
+    border-radius: 30px;
+    cursor: pointer;
+    
+    
+    
+    
+}
+.sec3 button:hover{
+    background:#3770e0;
+}
+
+@media screen and (max-width:475px) {
+    body{
+        width:100%;
+        overflow: auto;
+    }
+    body header{
+        width:100%;
+    }
+    body header .logo img{
+        width:2.5em;
+        margin:2%
+    }
+    body .landing .textbox p{
+        font-size:1.5em;
+    }
+    body .landing .textbox h1{
+        font-size: 4em;
+        color:transparent;
+        -webkit-text-stroke: 1px #fff; /* tạo ra viền ngoài của text*/
+        background:url(images/back.png);
+        -webkit-background-clip: text;/* background chỉ ở bên trong text */
+        background-position: 0 0;/* vị trí x:0 y:0*/
+        animation: back 20s linear infinite;
+    }
+    body .landing .textbox h3{
+        font-size: 2em;
+    }
+    body .landing .description a
+    {
+        padding: 0.5em 1em;
+    }
+    body .landing .description span{
+        font-size: 0.9em;
+    }
+    
+    .sec1 figure{
+        margin-top:1em;
+    }
+    .sec2{
+        display: block;
+    }
+    .sec2 h1{
+        padding-bottom: 0.5em;
+    }
+    .sec2 .about-me-img{
+        float:right;
+    }
+    .sec2 p{
+        display: block;
+    }
+    .sec3 form{
+        width: 100%;
+    }
 }
