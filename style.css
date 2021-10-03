@@ -364,8 +364,16 @@ body .parallax .ptext span{
     }
     body header .logo img{
         width:2.5em;
-        margin:2%
+        margin:2%;
+        margin-left:1em;
     }
+    body header .logo{
+        width:40%;
+    }
+    body header ul{
+        width:60%;
+    }
+
     body .landing .textbox p{
         font-size:1.5em;
     }
