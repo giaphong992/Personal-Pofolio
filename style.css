@@ -372,6 +372,7 @@ body .parallax .ptext span{
     }
     body header ul{
         width:60%;
+        margin:1%
     }
 
     body .landing .textbox p{
@@ -380,7 +381,7 @@ body .parallax .ptext span{
     body .landing .textbox h1{
         font-size: 4em;
         color:transparent;
-        -webkit-text-stroke: 1px #fff; /* tạo ra viền ngoài của text*/
+        -webkit-text-stroke: 1px #fff; /* tạo ra viền trong của text*/
         background:url(images/back.png);
         -webkit-background-clip: text;/* background chỉ ở bên trong text */
         background-position: 0 0;/* vị trí x:0 y:0*/
