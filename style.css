@@ -307,9 +307,7 @@ body .parallax .ptext span{
     grid-gap: 1em;
     
 }
-.sec3 form .row .email{
-    margin-left: 3em;
-}
+
 .sec3 form .row2 {
     display: flex;
     flex-direction: column;
@@ -345,10 +343,7 @@ body .parallax .ptext span{
     border:none;
     border-radius: 30px;
     cursor: pointer;
-    
-    
-    
-    
+
 }
 .sec3 button:hover{
     background:#3770e0;
